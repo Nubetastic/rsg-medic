@@ -8,11 +8,13 @@ version '2.1.5'
 shared_scripts {
     '@ox_lib/init.lua',
     'config.lua',
+    'syringeConfig.lua',
 }
 
 client_scripts {
     'client/client.lua',
     'client/job.lua',
+    'client/syringe.lua',
 }
 
 server_scripts {
@@ -27,7 +29,8 @@ files {
 dependencies {
     'rsg-core',
     'rsg-bossmenu',
-    'ox_lib'
+    'ox_lib',
+    'ox_target'
 }
 
 lua54 'yes'

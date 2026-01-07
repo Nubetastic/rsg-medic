@@ -37,8 +37,8 @@ end
 local DrawTxt = function(str, x, y, w, h, enableShadow, col1, col2, col3, a, centre)
     local string = CreateVarString(10, "LITERAL_STRING", str)
 
-    SetTextFontForCurrentCommand(1) -- Font 1 for appropiate REDM style
     SetTextScale(w, h)
+    SetTextFontForCurrentCommand(1) -- Font 1 for appropiate REDM style
     SetTextColor(math.floor(col1), math.floor(col2), math.floor(col3), math.floor(a))
     SetTextCentre(centre)
 
@@ -242,8 +242,8 @@ CreateThread(function()
         })
 
         createdEntries[#createdEntries + 1] = {type = "PROMPT", handle = loc.prompt}
-
-        if loc.showblip then
+		local noblip = false
+        if loc.showblip and noblip then
             local MedicBlip = BlipAddForCoords(1664425300, loc.coords)
             SetBlipSprite(MedicBlip, GetHashKey(Config.Blip.blipSprite), true)
             SetBlipScale(MedicBlip, Config.Blip.blipScale)
@@ -693,5 +693,16 @@ AddEventHandler("onResourceStop", function(resourceName)
                 exports['rsg-core']:deletePrompt(createdEntries[i].handle)
             end
         end
+    end
+end)
+
+
+AddEventHandler('rsg-medic:client:resetDeathTimer', function()
+    deathactive = false
+    deathTimerStarted = false
+    medicCalled = false
+    deathSecondsRemaining = 0
+    if Config.Debug then
+        print('Death timer reset by syringe')
     end
 end)
