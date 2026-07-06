@@ -37,8 +37,8 @@ end
 local DrawTxt = function(str, x, y, w, h, enableShadow, col1, col2, col3, a, centre)
     local string = CreateVarString(10, "LITERAL_STRING", str)
 
-    SetTextScale(w, h)
     SetTextFontForCurrentCommand(1) -- Font 1 for appropiate REDM style
+    SetTextScale(w, h)
     SetTextColor(math.floor(col1), math.floor(col2), math.floor(col3), math.floor(a))
     SetTextCentre(centre)
 
@@ -242,8 +242,8 @@ CreateThread(function()
         })
 
         createdEntries[#createdEntries + 1] = {type = "PROMPT", handle = loc.prompt}
-		local noblip = false
-        if loc.showblip and noblip then
+
+        if loc.showblip then
             local MedicBlip = BlipAddForCoords(1664425300, loc.coords)
             SetBlipSprite(MedicBlip, GetHashKey(Config.Blip.blipSprite), true)
             SetBlipScale(MedicBlip, Config.Blip.blipScale)

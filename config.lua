@@ -3,7 +3,7 @@ Config = {}
 -- Settings
 Config.Debug                    = false
 Config.JobRequired              = 'medic'
-Config.StorageMaxWeight         = 4000000 
+Config.StorageMaxWeight         = 4000000
 Config.StorageMaxSlots          = 48
 Config.DeathTimer               = 15 -- 300 = 5 mins / testing 60 = 1 min
 Config.WipeInventoryOnRespawn   = false
@@ -18,8 +18,8 @@ Config.MedicReviveHealth        = 60 -- percentage of max health when player is 
 Config.AddGPSRoute              = true
 Config.MedicCallDelay           = 60 -- delay in seconds before calling medic again
 Config.BandageTime              = 10000
-Config.BandageHealth            = 40 -- percetnate of max health when player use bandage
-Config.ResetOutlawStatus        = false
+Config.BandageHealth            = 45 -- percetnate of max health when player use bandage
+Config.ResetOutlawStatus        = true
 
 -- Blip Settings
 Config.Blip =
@@ -32,7 +32,7 @@ Config.Blip =
 -- Prompt Locations
 Config.MedicJobLocations =
 {
-    {name = 'Valentine Medic', prompt = 'valmedic', coords = vector3(-287.59, 811.28, 119.39 -0.8), showblip = true} -- Valentine
+    {name = 'Valentine Medic', prompt = 'valmedic', coords = vector3(-287.59, 811.28, 119.39 -0.8), showblip = false} -- Valentine
 }
 
 -- Respawn Locations
