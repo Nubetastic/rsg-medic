@@ -5,7 +5,7 @@ Config.Debug                    = false
 Config.JobRequired              = 'medic'
 Config.StorageMaxWeight         = 4000000
 Config.StorageMaxSlots          = 48
-Config.DeathTimer               = 15 -- 300 = 5 mins / testing 60 = 1 min
+Config.DeathTimer               = 60 -- 300 = 5 mins / testing 60 = 1 min
 Config.WipeInventoryOnRespawn   = false
 Config.WipeCashOnRespawn        = false
 Config.WipeBloodmoneyOnRespawn  = false
