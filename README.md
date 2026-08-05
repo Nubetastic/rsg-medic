@@ -137,4 +137,7 @@ Loaded automatically using `lib.locale()`.
 ## 💎 Credits
 - **RSG / Rexshack-RedM** — core framework and Medic system  
 - Community testers and translators  
-- License: GPL‑3.0  
+- License: GPL‑3.0
+
+Modified from https://github.com/Rexshack-RedM/rsg-medic, Aug 2025.
+See the Git history for changes. Distributed under GNU GPLv3.
